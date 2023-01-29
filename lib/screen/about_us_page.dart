@@ -23,18 +23,20 @@ class AboutUsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        if (aboutUsInfo.aboutApp != null)
-          AboutAppCard(aboutApp: aboutUsInfo.aboutApp!),
-        if (aboutUsInfo.aboutMe != null)
-          AboutMeCard(aboutMe: aboutUsInfo.aboutMe!),
-        if (aboutUsInfo.moreApps != null)
-          MoreAppCard(moreApp: aboutUsInfo.moreApps!),
-        if (aboutUsInfo.support != null)
-          SupportCard(support: aboutUsInfo.support!),
-      ],
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          if (aboutUsInfo.aboutApp != null)
+            AboutAppCard(aboutApp: aboutUsInfo.aboutApp!),
+          if (aboutUsInfo.aboutMe != null)
+            AboutMeCard(aboutMe: aboutUsInfo.aboutMe!),
+          if (aboutUsInfo.moreApps != null)
+            MoreAppCard(moreApp: aboutUsInfo.moreApps!),
+          if (aboutUsInfo.support != null)
+            SupportCard(support: aboutUsInfo.support!),
+        ],
+      ),
     );
   }
 }
