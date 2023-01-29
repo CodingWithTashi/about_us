@@ -1,3 +1,4 @@
 library about_us;
 
-class AboutUs {}
+export 'package:about_us/model/about_us_info.dart';
+export 'package:about_us/screen/about_us_page.dart';
